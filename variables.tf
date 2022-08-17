@@ -15,25 +15,7 @@ variable "network_cidr_range" {
   default     = "10.0.0.0/8"
 }
 
-variable "subject_cidr_range_public" {
-  description = "[Optional] The Primary Region to run operations and build within."
-  type        = list(string)
-  default     = ["10.0.0.0/24", "10.0.0.1/24", "10.0.0.2/24"]
-}
-
-variable "subject_cidr_range_mid" {
-  description = "[Optional] The Primary Region to run operations and build within."
-  type        = list(string)
-  default     = []
-}
-
-variable "subject_cidr_range_data" {
-  description = "[Optional] The Primary Region to run operations and build within."
-  type        = list(string)
-  default     = []
-}
-
-variable "extra_tags" {
+variable "tags" {
   description = "[Optional] Extra Tags to add to your stack."
   type        = map
   default     = {}
@@ -43,4 +25,27 @@ variable "enable_internet_gateway" {
   description = "[Optional] If to enable the Internet Gateway Service."
   type        = bool
   default     = true
+}
+
+variable "enable_nat_gateway" {
+  description = "[Optional] If to enable the NAT Gateway Service."
+  type        = bool
+  default     = true
+}
+
+variable "tiers" {
+  description = "[Optional] How many uniform tiers to create, use 'public' to create a public tier."
+  default     = ["public", "data", "mid"]
+  type        = list(string)
+}
+
+variable "availability_zones" {
+  description = "[Optional] A list of Availability zones to operate in."
+  default     = ["a", "b", "c", "d"]
+  type        = list(string)
+}
+
+variable "network_bits" {
+  description = "[Optional] The number of network bits to be allocated"
+  default     = 8
 }
