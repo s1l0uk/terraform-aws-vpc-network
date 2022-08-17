@@ -18,17 +18,13 @@ variable "network_cidr_range" {
 variable "tags" {
   description = "[Optional] Extra Tags to add to your stack."
   type        = map
-  default     = {}
+  default     = {
+    enviroment = "alpha"
+  }
 }
 
-variable "enable_internet_gateway" {
-  description = "[Optional] If to enable the Internet Gateway Service."
-  type        = bool
-  default     = true
-}
-
-variable "enable_nat_gateway" {
-  description = "[Optional] If to enable the NAT Gateway Service."
+variable "enable_private_internet_access" {
+  description = "[Optional] Should non-public instance be able to access the Internet via a NAT instance."
   type        = bool
   default     = true
 }
@@ -41,7 +37,7 @@ variable "tiers" {
 
 variable "availability_zones" {
   description = "[Optional] A list of Availability zones to operate in."
-  default     = ["a", "b", "c", "d"]
+  default     = ["a", "b", "c"]
   type        = list(string)
 }
 
