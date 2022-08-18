@@ -7,7 +7,7 @@ variable "name" {
 variable "region" {
   description = "[Required] The Region to run operations and build within."
   type        = string
-  default     = "eu-west-1"  # Using EU servers because FUCK BREXIT!
+  default     = "eu-west-1" # Using EU servers because FUCK BREXIT!
 }
 
 variable "network_cidr_range" {
@@ -19,7 +19,7 @@ variable "network_cidr_range" {
 variable "tags" {
   description = "[Optional] Extra Tags to add to your stack."
   type        = map
-  default     = {
+  default = {
     enviroment = "alpha"
   }
 }
