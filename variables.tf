@@ -7,6 +7,7 @@ variable "name" {
 variable "region" {
   description = "[Required] The Region to run operations and build within."
   type        = string
+  default     = "eu-west-1"  # Using EU servers because FUCK BREXIT!
 }
 
 variable "network_cidr_range" {

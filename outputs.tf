@@ -1,10 +1,5 @@
 output "NAT_Gateway_IP" {
-  value = aws_eip.nat_gateway.*.public_ip
-}
-
-output "VPC_Name" {
-  description = "VPC Name"
-  value       = aws_vpc.vpc.name
+  value = aws_nat_gateway.nat_gateway.*.public_ip
 }
 
 output "VPC_ID" {
