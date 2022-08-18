@@ -1,0 +1,25 @@
+# For more information, see https://github.com/terraform-docs/terraform-docs/blob/master/docs/CONFIG_FILE.md
+
+formatter: markdown table
+header-from: header.md
+footer-from: footer.md
+
+sections:
+  hide-all: false
+  show-all: true
+
+output-values:
+  enabled: false
+  from: ""
+
+sort:
+  enabled: true
+  by: required
+
+settings:
+  anchor: false
+  color: true
+  escape: true
+  indent: 2
+  required: true
+  sensitive: true

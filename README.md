@@ -1,20 +1,22 @@
+# terraform-aws-vpc-network
+
 ## Requirements
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 3.0 |
+| aws | ~> 3.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | ~> 3.0 |
+| aws | ~> 3.0 |
 
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_subnet_addrs"></a> [subnet\_addrs](#module\_subnet\_addrs) | hashicorp/subnets/cidr | n/a |
+| subnet\_addrs | hashicorp/subnets/cidr | n/a |
 
 ## Resources
 
@@ -34,20 +36,20 @@
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_availability_zones"></a> [availability\_zones](#input\_availability\_zones) | [Optional] A list of Availability zones to operate in. | `list(string)` | <pre>[<br>  "a",<br>  "b",<br>  "c"<br>]</pre> | no |
-| <a name="input_enable_private_internet_access"></a> [enable\_private\_internet\_access](#input\_enable\_private\_internet\_access) | [Optional] Should non-public instance be able to access the Internet via a NAT instance. | `bool` | `true` | no |
-| <a name="input_name"></a> [name](#input\_name) | [Optional] The root name for the Project. | `string` | `"Awesome Project!"` | no |
-| <a name="input_network_bits"></a> [network\_bits](#input\_network\_bits) | [Optional] The number of network bits to be allocated | `number` | `8` | no |
-| <a name="input_network_cidr_range"></a> [network\_cidr\_range](#input\_network\_cidr\_range) | [Optional] The Primary Region to run operations and build within. | `string` | `"10.0.0.0/8"` | no |
-| <a name="input_region"></a> [region](#input\_region) | [Required] The Region to run operations and build within. | `string` | `"eu-west-1"` | no |
-| <a name="input_tags"></a> [tags](#input\_tags) | [Optional] Extra Tags to add to your stack. | `map` | <pre>{<br>  "enviroment": "alpha"<br>}</pre> | no |
-| <a name="input_tiers"></a> [tiers](#input\_tiers) | [Optional] How many uniform tiers to create, use 'public' to create a public tier. | `list(string)` | <pre>[<br>  "public",<br>  "data",<br>  "mid"<br>]</pre> | no |
+| availability\_zones | [Optional] A list of Availability zones to operate in. | `list(string)` | <pre>[<br>  "a",<br>  "b",<br>  "c"<br>]</pre> | no |
+| enable\_private\_internet\_access | [Optional] Should non-public instance be able to access the Internet via a NAT instance. | `bool` | `true` | no |
+| name | [Optional] The root name for the Project. | `string` | `"Awesome Project!"` | no |
+| network\_bits | [Optional] The number of network bits to be allocated | `number` | `8` | no |
+| network\_cidr\_range | [Optional] The Primary Region to run operations and build within. | `string` | `"10.0.0.0/8"` | no |
+| region | [Required] The Region to run operations and build within. | `string` | `"eu-west-1"` | no |
+| tags | [Optional] Extra Tags to add to your stack. | `map` | <pre>{<br>  "enviroment": "alpha"<br>}</pre> | no |
+| tiers | [Optional] How many uniform tiers to create, use 'public' to create a public tier. | `list(string)` | <pre>[<br>  "public",<br>  "data",<br>  "mid"<br>]</pre> | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="output_NAT_Gateway_IP"></a> [NAT\_Gateway\_IP](#output\_NAT\_Gateway\_IP) | n/a |
-| <a name="output_Network_Allocation"></a> [Network\_Allocation](#output\_Network\_Allocation) | How the Network was divided |
-| <a name="output_Subnets"></a> [Subnets](#output\_Subnets) | How the Network was divided |
-| <a name="output_VPC_ID"></a> [VPC\_ID](#output\_VPC\_ID) | How the Network was divided |
+| NAT\_Gateway\_IP | n/a |
+| Network\_Allocation | How the Network was divided |
+| Subnets | How the Network was divided |
+| VPC\_ID | How the Network was divided |
