@@ -54,4 +54,4 @@
 | Subnets | How the Network was divided |
 | VPC\_ID | How the Network was divided |
 
-For further information on the project consult [http://devsecopz.blogstop.com/]
+For further information on the project consult [http://devsecopz.blogspot.com/]
