@@ -16,3 +16,13 @@ output "Subnets" {
   description = "How the Network was divided"
   value       = aws_subnet.subnets
 }
+
+output "RouteTable" {
+  description = "Route Table Information to add as needed"
+  value       =  aws_route_table
+}
+
+output "RouteAssociation" {
+  description = "Route Table Information to add as needed"
+  value       = aws_route_table_association
+}
