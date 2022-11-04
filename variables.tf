@@ -13,7 +13,7 @@ variable "region" {
 variable "network_cidr_range" {
   description = "[Optional] The Primary Region to run operations and build within."
   type        = string
-  default     = "10.0.0.0/8"
+  default     = "10.0.0.0/16"
 }
 
 variable "tags" {
