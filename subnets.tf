@@ -6,7 +6,7 @@ resource "aws_subnet" "subnets" {
   }
   vpc_id                  = aws_vpc.vpc.id
   cidr_block              = each.value
-  availability_zone       = split(each.key, "-")[0]
+  availability_zone       = "${var.region}${split("-", each.key)[0]}"
   map_public_ip_on_launch = false
   tags                    = merge({ Name = "${each.key}-subnet-${var.region}" }, var.tags)
 }
@@ -18,7 +18,7 @@ resource "aws_subnet" "public_subnets" {
   }
   vpc_id                  = aws_vpc.vpc.id
   cidr_block              = each.value
-  availability_zone       = split(each.key, "-")[0]
+  availability_zone       = "${var.region}${split("-", each.key)[0]}"
   map_public_ip_on_launch = true
   tags                    = merge({ Name = "${each.key}-subnet-${var.region}" }, var.tags)
 }
