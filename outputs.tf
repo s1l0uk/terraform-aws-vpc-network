@@ -17,12 +17,22 @@ output "Subnets" {
   value       = aws_subnet.subnets
 }
 
-output "RouteTable" {
+output "RouteTablePrivateInternet" {
   description = "Route Table Information to add as needed"
-  value       =  aws_route_table
+  value       =  aws_route_table.private_internet
 }
 
-output "RouteAssociation" {
+output "RouteTablePublic" {
   description = "Route Table Information to add as needed"
-  value       = aws_route_table_association
+  value       =  aws_route_table.public
+}
+
+output "RouteAssociationPrivate" {
+  description = "Route Table Information to add as needed"
+  value       = aws_route_table_association.internet_access
+}
+
+output "RouteAssociationPubilc" {
+  description = "Route Table Information to add as needed"
+  value       = aws_route_table_association.public
 }
