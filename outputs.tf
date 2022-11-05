@@ -7,6 +7,11 @@ output "VPC_ID" {
   value       = aws_vpc.vpc.id
 }
 
+output "VPC" {
+  description = "How the Network was divided"
+  value       = aws_vpc.vpc
+}
+
 output "Network_Allocation" {
   description = "How the Network was divided"
   value       = module.subnet_addrs
@@ -15,6 +20,11 @@ output "Network_Allocation" {
 output "Subnets" {
   description = "How the Network was divided"
   value       = aws_subnet.subnets
+}
+
+output "PublicSubnets" {
+  description = "How the Network was divided"
+  value       = aws_subnet.public_subnets
 }
 
 output "RouteTablePrivateInternet" {
