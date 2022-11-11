@@ -2,15 +2,13 @@
 
 ## Requirements
 
-| Name | Version |
-|------|---------|
-| aws | ~> 3.0 |
+No requirements.
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| aws | ~> 3.0 |
+| aws | n/a |
 
 ## Modules
 
@@ -52,11 +50,13 @@
 |------|-------------|
 | NAT\_Gateway\_IP | n/a |
 | Network\_Allocation | How the Network was divided |
+| PublicSubnets | How the Network was divided |
 | RouteAssociationPrivate | Route Table Information to add as needed |
 | RouteAssociationPubilc | Route Table Information to add as needed |
 | RouteTablePrivateInternet | Route Table Information to add as needed |
 | RouteTablePublic | Route Table Information to add as needed |
 | Subnets | How the Network was divided |
+| VPC | How the Network was divided |
 | VPC\_ID | How the Network was divided |
 
 For further information on the project consult [http://devsecopz.blogspot.com/]
