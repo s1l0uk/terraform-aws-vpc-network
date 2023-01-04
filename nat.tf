@@ -6,7 +6,7 @@ resource "aws_eip" "eip" {
 }
 
 resource "aws_nat_gateway" "nat_gateway" {
-  count         = length(aws_eip.eip)
+  count         = var.enable_private_internet_access ? length(aws_eip.eip) : 0
   allocation_id = aws_eip.eip[count.index].id
   subnet_id     = compact([
     for net in aws_subnet.public_subnets : var.enable_private_internet_access ? net.id : null
